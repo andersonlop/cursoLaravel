@@ -8,7 +8,12 @@ class ContatoController extends Controller
 {
     public function index()
     {
-    	return "Esse é o Index do ContatoController";
+
+    	$contatos = [
+    		(object)["nome"=>"Maria","tel"=>"16 98144-9999"],
+    		(object)["nome"=>"Pedro","tel"=>"99 98275-2222"]
+    	]; 
+    	return view('contato.index', compact('contatos'));
     }
 
     public function criar(Request $req)
