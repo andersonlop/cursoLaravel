@@ -1,0 +1,50 @@
+
+C:\wamp64\www\cursos\Introducao_ao_Laravel\cursoLaravel>php artisan tinker
+Psy Shell v0.10.4 (PHP 7.4.0 — cli) by Justin Hileman
+>>> App\Contato::all();
+=> Illuminate\Database\Eloquent\Collection {#3826
+     all: [],
+   }
+>>> $contato = new App\Contato();
+=> App\Contato {#3034}
+>>> $contato->nome = "Anderson";
+=> "Anderson"
+>>> $contato-tel = "16 99291-1729";
+PHP Parse error: Syntax error, unexpected '=' on line 1
+>>> $contato->tel = "16 99291-1729";
+=> "16 99291-1729"
+>>> $contato->email = "contato@andersonls.com.br";
+=> "contato@andersonls.com.br"
+>>> $contato;
+=> App\Contato {#3034
+     nome: "Anderson",
+     tel: "16 99291-1729",
+     email: "contato@andersonls.com.br",
+   }
+>>> $contato->save();
+=> true
+>>> App\Contato::all();
+=> Illuminate\Database\Eloquent\Collection {#3758
+     all: [
+       App\Contato {#3825
+         id: 1,
+         nome: "Anderson",
+         tel: "16 99291-1729",
+         email: "contato@andersonls.com.br",
+         created_at: "2020-06-20 04:55:53",
+         updated_at: "2020-06-20 04:55:53",
+       },
+     ],
+   }
+>>> $con = App\Contato::find(1);
+=> App\Contato {#3914
+     id: 1,
+     nome: "Anderson",
+     tel: "16 99291-1729",
+     email: "contato@andersonls.com.br",
+     created_at: "2020-06-20 04:55:53",
+     updated_at: "2020-06-20 04:55:53",
+   }
+>>> $con->delete();
+=> true
+>>>   
