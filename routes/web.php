@@ -23,4 +23,9 @@ Route::post('/contato', ['uses'=>'ContatoController@criar']);
 
 Route::put('/contato', ['uses'=>'ContatoController@Editar']);
 
-
+Route::get('/Admin/Cursos',['as'=>'admin.cursos','uses'=>'Admin\CursoController@index']);
+Route::get('/Admin/Cursos/adicionar',['as'=>'admin.cursos.adicionar','uses'=>'Admin\CursoController@adicionar']);
+Route::post('/Admin/Cursos/salvar',['as'=>'admin.cursos.salvar','uses'=>'Admin\CursoController@salvar']);
+Route::get('/Admin/Cursos/editar/{id}',['as'=>'admin.cursos.editar','uses'=>'Admin\CursoController@editar']);
+Route::put('/Admin/Cursos/atualizar/{id}',['as'=>'admin.cursos.atualizar','uses'=>'Admin\CursoController@atualizar']);
+Route::get('/Admin/Cursos/deletar/{id}',['as'=>'admin.cursos.deletar','uses'=>'Admin\CursoController@deletar']);
