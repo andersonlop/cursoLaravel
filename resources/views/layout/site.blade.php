@@ -6,4 +6,3 @@
 
 @include('layout._includes.footer')
 
-

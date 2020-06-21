@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contato extends Model
 {
-    public function lista ()
+    public function lista()
     {
         return (object) [
-            'nome'=>'Anderson',
-            'tel'=>'16 99291-1729'
+            'nome'=>'guilherme',
+            'tel'=>'4533636363'
         ];
     }
 }
